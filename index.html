@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space News Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PROBLEM 1: Render-blocking script in the head element -->
+    <script src="heavy-script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🚀 Space Exploration Daily</h1>
+    </header>
+    
+    <main>
+        <!-- PROBLEM 4: Missing minimum height area causes a Layout Shift when app.js runs -->
+        <div id="dynamic-ad-space"></div>
+
+        <section class="content">
+            <h2>Latest Mission Updates</h2>
+            <!-- PROBLEM 2 & 3: Massive 5000px wide image file instead of an optimized asset -->
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=5000" id="hero-image" alt="Space News Banner">
+            
+            <p>Welcome to your daily dose of deep space discoveries. Today, scientists announced brand new findings from remote galaxies using next-generation space telescopes.</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
